@@ -3,29 +3,6 @@ import portrait from "@/assets/jonatham-portrait.jpg";
 import { useEffect, useRef, useState } from "react";
 import { ChevronsDown } from "lucide-react";
 
-const AnimatedLetters = ({
-  text,
-  className,
-  baseDelay = 0
-
-
-
-
-}: {text: string;className?: string;baseDelay?: number;}) => {
-  return (
-    <span className={className} style={{ perspective: "600px" }}>
-      {text.split("").map((char, i) =>
-      <span
-        key={i}
-        className="inline-block animate-letter-fade opacity-0 [animation-fill-mode:both]"
-        style={{ animationDelay: `${baseDelay + i * 0.07}s` }}>
-        
-          {char === " " ? "\u00A0" : char}
-        </span>
-      )}
-    </span>);
-
-};
 
 const ParallaxPhoto = ({ src, alt }: {src: string;alt: string;}) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -68,64 +45,53 @@ export const Hero = () => {
       className="relative h-screen flex flex-col overflow-hidden">
       
       <div className="lg:hidden flex flex-col h-screen">
-        <div className="relative h-[55vh] flex-shrink-0 overflow-hidden">
+        <div className="relative h-[48vh] flex-shrink-0 overflow-hidden">
           <ParallaxPhoto src={portrait} alt="Dr. Jonatham Moraes" />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/20" />
+          
           <div className="absolute top-6 left-6 z-10 animate-fade-in opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "1.2s" }}>
             <img src={logo} alt="Jonatham Moraes Advocacia" className="w-14 h-auto" />
           </div>
 
-          <div className="absolute top-6 right-6 animate-fade-in opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "1.6s" }}>
-            <div className="w-12 h-12 border-t-2 border-r-2 border-cream/50" />
-          </div>
-          <div className="absolute bottom-20 left-6 animate-fade-in opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "1.8s" }}>
-            <div className="w-10 h-10 border-l-2 border-b-2 border-cream/40" />
+          <div className="absolute bottom-6 left-6 z-20 animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "1.5s" }}>
+            <div className="backdrop-blur-md bg-white/[0.02] border border-cream/10 px-5 py-3 rounded-2xl w-fit">
+              <div className="flex flex-col">
+                <p className="text-[12px] font-display italic text-cream/80 tracking-wider">Dr. Jonatham Moraes</p>
+                <div className="flex items-center gap-3 mt-1.5">
+                  <p className="text-[9px] text-foreground/50 uppercase tracking-widest">OAB/CE 54.863</p>
+                  <span className="w-1 h-1 rounded-full bg-cream/20" />
+                  <p className="text-[9px] text-foreground/50 uppercase tracking-widest">Brasil Todo</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="relative flex-1 bg-background px-6 pt-6 pb-8 flex flex-col justify-between">
-          <div
-            className="absolute top-0 left-0 right-0 h-16 bg-navy-light -translate-y-8"
-            style={{ clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0 100%)" }} />
-          
-
+        <div className="relative flex-1 bg-background px-6 pt-2 pb-12 flex flex-col justify-center text-center">
           <div className="relative z-10">
-            <div className="mb-5 animate-clip-reveal opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "1s", clipPath: "inset(0 100% 0 0)" }}>
-              <div className="flex flex-wrap gap-x-5 gap-y-1 text-xs tracking-[0.2em] uppercase text-cream/90">
-                <span>Cível</span>
-                <span className="text-cream/40">•</span>
-                <span>Consumidor</span>
-                <span className="text-cream/40">•</span>
-                <span>Previdenciário</span>
-              </div>
-            </div>
-
-            <h1 className="font-display leading-[0.9]" style={{ fontSize: "clamp(2.8rem, 12vw, 4rem)" }}>
-              <span className="block overflow-visible py-4">
-                <AnimatedLetters text="Jonatham" className="text-foreground" baseDelay={1.0} />
-              </span>
-              <span className="block ml-[8vw] overflow-visible py-4">
-                <AnimatedLetters text="Moraes" className="text-cream" baseDelay={1.8} />
-              </span>
+            <h1 className="font-display leading-[1.0] text-[2.8rem] mb-10">
+              <span className="block text-foreground/90 font-light italic text-[2.4rem] mb-1">Resolva seu</span>
+              <span className="block text-foreground uppercase tracking-tight font-bold mt-1 text-[#c2a36b]"> problema</span>
+              <span className="block text-cream italic font-light text-[2.4rem]">Jurídico antes que ele piore.</span>
             </h1>
 
-            <div className="mt-5 animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "2.4s" }}>
-              <p className="text-base tracking-wide text-foreground/90 leading-relaxed">
-                Advocacia e Consultoria Jurídica
-              </p>
-              <p className="mt-2 text-sm tracking-widest text-cream/70">OAB/CE 54.863</p>
-            </div>
+            <p className="text-[16px] tracking-wide text-foreground/80 leading-[1.7] mb-16 max-w-[320px] mx-auto animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "2s" }}>
+              Atendimento direto, rápido e sem burocracia para resolver sua situação.
+            </p>
 
-            <div className="mt-6 h-px bg-cream/50 max-w-[140px] animate-line-expand [animation-fill-mode:both]" style={{ animationDelay: "2.8s" }} />
-            
-
-          </div>
-
-          <div className="mt-8">
-            <div className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground/60">
-              DESÇA PARA CONHECER
+            <div className="animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "2.4s" }}>
+              <a
+                href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Preciso de ajuda para resolver um problema jurídico.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-3 px-8 py-6 rounded-full bg-[#25D366] text-white font-bold text-[14px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.6)] transition-all duration-300"
+              >
+                Falar com advogado agora
+              </a>
+              <div className="mt-14 flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.2em] text-cream/40 px-4 py-2 bg-white/[0.03] border border-cream/10 rounded-full w-fit mx-auto">
+                 <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                 <span>Online agora — atendimento imediato</span>
+              </div>
             </div>
           </div>
         </div>
@@ -133,100 +99,93 @@ export const Hero = () => {
 
       <div className="hidden lg:flex lg:flex-col lg:justify-center lg:h-screen">
         <div
-          className="absolute inset-0 bg-navy-light origin-top-left"
-          style={{ clipPath: "polygon(0 0, 65% 0, 45% 100%, 0 100%)" }} />
-
-        <div className="absolute right-0 top-0 w-[50%] h-full">
-          <div
-            className="absolute inset-0 overflow-hidden"
-            style={{ clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%)" }}>
-            <ParallaxPhoto src={portrait} alt="Dr. Jonatham Moraes" />
-            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/30" />
-          </div>
-
-          <div
-            className="absolute right-8 bottom-8 animate-fade-in opacity-0 [animation-fill-mode:both]"
-            style={{ animationDelay: "2.2s" }}>
-            <div className="w-16 h-16 border-b-2 border-r-2 border-cream/20" />
-          </div>
-
-          <div
-            className="absolute right-6 top-1/2 -translate-y-1/2 animate-fade-in opacity-0 [animation-fill-mode:both]"
-            style={{ animationDelay: "2.5s" }}>
+          className="absolute inset-0 bg-background overflow-hidden">
+          <div className="absolute top-0 right-0 w-[55%] h-full">
             <div
-              className="text-[10px] tracking-[0.6em] text-cream/40 uppercase"
-              style={{ writingMode: "vertical-rl" }}>
-              Seu direito, nossa causa
+              className="absolute inset-0 overflow-hidden"
+              style={{ clipPath: "polygon(15% 0, 100% 0, 100% 100%, 0 100%)" }}>
+              <ParallaxPhoto src={portrait} alt="Dr. Jonatham Moraes" />
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
+            </div>
+
+            <div className="absolute bottom-16 left-0 z-30 animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "2.2s" }}>
+              <div className="backdrop-blur-md bg-white/[0.02] border border-cream/10 p-6 rounded-3xl max-w-[280px]">
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-10 h-10 rounded-full bg-cream/5 border border-cream/10 flex items-center justify-center">
+                    <img src={logo} alt="Logo" className="w-5 h-auto opacity-70" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-lg text-cream/90 tracking-wide">Dr. Jonatham Moraes</h3>
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-foreground/50">Advogado</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between text-[10px] tracking-[0.2em] text-foreground/60 uppercase">
+                    <span>OAB/CE</span>
+                    <span className="text-cream/80">54.863</span>
+                  </div>
+                  <div className="h-px w-full bg-gradient-to-r from-cream/10 to-transparent" />
+                  <div className="flex items-center gap-3">
+                     <span className="w-1.5 h-1.5 rounded-full bg-cream/20" />
+                     <span className="text-[9px] uppercase tracking-[0.2em] text-foreground/50">Atendimento em todo o Brasil</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div
-          className="absolute top-16 left-16 z-10 animate-fade-in opacity-0 [animation-fill-mode:both]"
-          style={{ animationDelay: "0.4s" }}>
+        <div className="absolute top-16 left-16 z-10 animate-fade-in opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "0.4s" }}>
           <img src={logo} alt="Jonatham Moraes Advocacia" className="w-32 h-auto" />
         </div>
 
-        <div className="relative z-10 px-16 max-w-[55%]">
-          <div
-            className="mb-10 animate-clip-reveal [animation-fill-mode:both]"
-            style={{ animationDelay: "0.8s", clipPath: "inset(0 100% 0 0)" }}>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm tracking-[0.3em] uppercase text-muted-foreground">
-              <span>Cível</span>
-              <span className="text-foreground/30">•</span>
-              <span>Consumidor</span>
-              <span className="text-foreground/30">•</span>
-              <span>Previdenciário</span>
-            </div>
-          </div>
-
-          <div className="relative">
-            <h1 className="text-editorial-xl text-foreground leading-[0.9]">
-              <span className="block overflow-visible py-6" style={{ perspective: "800px" }}>
-                <AnimatedLetters text="Jonatham" className="text-foreground" baseDelay={1.0} />
-              </span>
-              <span className="block ml-[10vw] overflow-visible py-6" style={{ perspective: "800px" }}>
-                <AnimatedLetters text="Moraes" className="text-cream" baseDelay={1.8} />
-              </span>
+        <div className="relative z-10 px-16 max-w-[50%]">
+          <div className="relative mb-12 xl:mb-16">
+            <h1 className="font-display leading-[0.95] animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "0.8s" }}>
+              <span className="block text-4xl lg:text-5xl xl:text-6xl 2xl:text-editorial-lg text-foreground/80 font-light italic mb-2">Resolva seu</span>
+              <span className="block text-[4.5rem] lg:text-[5.5rem] xl:text-[6.5rem] 2xl:text-[7.5rem] text-foreground uppercase tracking-tighter font-bold -ml-2 text-[#c2a36b]">Problema</span>
+              <span className="block text-4xl lg:text-5xl xl:text-6xl 2xl:text-editorial-lg text-cream italic font-serif mt-2">jurídico antes que ele piore.</span>
             </h1>
           </div>
 
           <div
-            className="mt-12 max-w-md animate-fade-up opacity-0 [animation-fill-mode:both]"
-            style={{ animationDelay: "2.6s" }}>
-            <p className="text-base tracking-wide text-muted-foreground leading-relaxed">
-              Advocacia e Consultoria Jurídica
+            className="mt-12 xl:mt-20 max-w-xl animate-fade-up opacity-0 [animation-fill-mode:both]"
+            style={{ animationDelay: "1.2s" }}>
+            <p className="text-xl lg:text-2xl xl:text-3xl tracking-wide text-foreground/70 leading-[1.8] mb-12 xl:mb-16 font-light">
+              Fale agora com o Dr. Jonatham Moraes. Atendimento <span className="text-foreground font-normal">direto, rápido e sem burocracia</span> para resolver sua situação.
             </p>
-            <p className="mt-1 text-xs tracking-widest text-muted-foreground/60">OAB/CE 54.863</p>
-          </div>
+            
+            <div className="flex items-center gap-4 mb-14 xl:mb-20">
+               <div className="flex items-center gap-4 xl:gap-5 px-6 xl:px-8 py-3 xl:py-4 rounded-full bg-white/[0.1] border border-cream/40 backdrop-blur-md shadow-2xl">
+                 <span className="w-2.5 h-2.5 xl:w-3 xl:h-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_20px_rgba(34,197,94,0.9)]" />
+                 <span className="text-[11px] xl:text-[13px] uppercase tracking-[0.3em] xl:tracking-[0.4em] text-cream font-black">Online agora — atendimento imediato</span>
+               </div>
+            </div>
 
-          <div
-            className="mt-14 h-px bg-foreground/20 origin-left animate-line-expand [animation-fill-mode:both]"
-            style={{ animationDelay: "3.0s", maxWidth: "200px" }} />
-          
-          <div className="mt-10">
-            <a
-              href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de agendar uma consulta.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2 rounded-full bg-primary text-primary-foreground text-xs tracking-[0.3em] uppercase hover:bg-primary/90 transition-colors"
-              aria-label="Agendar consulta pelo WhatsApp"
-            >
-              Agende uma consulta
-            </a>
+            <div className="flex items-center gap-8">
+              <a
+                href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Preciso de ajuda para resolver um problema jurídico.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center gap-4 xl:gap-6 px-10 xl:px-16 py-6 xl:py-8 rounded-full bg-[#25D366] text-white font-black text-[0.9rem] xl:text-[1.1rem] tracking-[0.2em] xl:tracking-[0.25em] uppercase overflow-hidden shadow-[0_25px_60px_-15px_rgba(37,211,102,0.65)] transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_30px_70px_-10px_rgba(37,211,102,0.75)]"
+                aria-label="Falar com advogado agora"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                <span>Falar com advogado agora</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <div
-          className="absolute bottom-8 left-16 animate-fade-in opacity-0 [animation-fill-mode:both]"
-          style={{ animationDelay: "3.3s" }}>
-          <div className="flex items-center gap-3">
-            <div className="h-px w-16 bg-foreground/20" />
-            <span className="text-[10px] tracking-[0.6em] uppercase text-muted-foreground">
-              DESÇA PARA CONHECER
+          className="absolute bottom-12 left-16 animate-fade-in opacity-0 [animation-fill-mode:both]"
+          style={{ animationDelay: "3s" }}>
+          <div className="flex items-center gap-4 group cursor-pointer hover:opacity-80 transition-opacity">
+            <div className="h-px w-20 bg-cream/20 group-hover:w-32 transition-all duration-500" />
+            <span className="text-[10px] tracking-[0.8em] uppercase text-cream/40">
+              RESOLVA HOJE
             </span>
-            <ChevronsDown className="w-5 h-5 text-cream animate-bounce" />
+            <ChevronsDown className="w-4 h-4 text-cream animate-bounce" />
           </div>
         </div>
       </div>

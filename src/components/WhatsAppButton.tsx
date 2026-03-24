@@ -1,9 +1,25 @@
 import { MessageCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export const WhatsAppButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const phoneNumber = "5585999999999";
-  const message = "Olá! Gostaria de agendar uma consulta.";
+  const message = "Olá! Preciso de ajuda para resolver um problema jurídico.";
   
+  useEffect(() => {
+    const toggleVisibility = () => {
+      // Show button after scrolling down 300px (past hero)
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -11,15 +27,23 @@ export const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 group"
+      className={`fixed bottom-8 right-8 z-50 group flex flex-col items-center transition-all duration-500 transform ${
+        isVisible ? "translate-y-0 opacity-100 pointer-events-auto" : "translate-y-16 opacity-0 pointer-events-none"
+      }`}
       aria-label="Contato via WhatsApp"
     >
-      <span className="absolute inset-0 rounded-full bg-green-500/30 animate-ping" />
-      <div className="relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg shadow-green-500/30 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-green-500/40">
-        <MessageCircle className="w-6 h-6 text-white fill-white" />
+      <div className="relative">
+        <span className="absolute inset-0 rounded-full bg-[#25D366]/40 animate-ping group-hover:animate-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="relative flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_15px_30px_-5px_rgba(37,211,102,0.4)] transition-all duration-500 group-hover:scale-110 group-hover:rotate-[360deg]">
+          <MessageCircle className="w-8 h-8 text-white fill-white" />
+        </div>
       </div>
-      <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-3 py-2 bg-card text-foreground text-sm font-medium rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-        Fale comigo
+      
+      <span className="absolute bottom-full mb-4 px-6 py-3 backdrop-blur-xl bg-white/[0.03] border border-cream/20 text-white text-[10px] font-bold uppercase tracking-[0.3em] rounded-2xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 whitespace-nowrap pointer-events-none">
+        <span className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+          Falar com advogado agora
+        </span>
       </span>
     </a>
   );
