@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronsDown } from "lucide-react";
 
 
-const ParallaxPhoto = ({ src, alt }: {src: string;alt: string;}) => {
+const ParallaxPhoto = ({ src, alt, position = "object-center" }: {src: string; alt: string; position?: string;}) => {
   const ref = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
 
@@ -26,7 +26,7 @@ const ParallaxPhoto = ({ src, alt }: {src: string;alt: string;}) => {
         src={src}
         alt={alt}
         loading="lazy"
-        className="w-full h-[120%] object-cover object-center animate-photo-reveal opacity-0 [animation-fill-mode:both]"
+        className={`w-full h-[120%] object-cover animate-photo-reveal opacity-0 [animation-fill-mode:both] ${position}`}
         style={{
           animationDelay: "0.3s",
           filter: "contrast(1.1) brightness(0.9)",
@@ -44,9 +44,9 @@ export const Hero = () => {
       id="inicio"
       className="relative h-screen flex flex-col overflow-hidden">
       
-      <div className="lg:hidden flex flex-col h-screen">
-        <div className="relative h-[48vh] flex-shrink-0 overflow-hidden">
-          <ParallaxPhoto src={portrait} alt="Dr. Jonatham Moraes" />
+      <div className="lg:hidden flex flex-col min-h-[100dvh]">
+        <div className="relative h-[45vh] min-h-[340px] max-h-[460px] flex-shrink-0 overflow-hidden">
+          <ParallaxPhoto src={portrait} alt="Dr. Jonatham Moraes" position="object-top sm:object-[center_15%]" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/20" />
           
           <div className="absolute top-6 left-6 z-10 animate-fade-in opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "1.2s" }}>
@@ -58,24 +58,24 @@ export const Hero = () => {
               <div className="flex flex-col">
                 <p className="text-[12px] font-display italic text-cream/80 tracking-wider">Dr. Jonatham Moraes</p>
                 <div className="flex items-center gap-3 mt-1.5">
-                  <p className="text-[9px] text-foreground/50 uppercase tracking-widest">OAB/CE 54.863</p>
+                  <p className="text-[8px] sm:text-[9px] text-foreground/50 uppercase tracking-widest">OAB/CE 54.863</p>
                   <span className="w-1 h-1 rounded-full bg-cream/20" />
-                  <p className="text-[9px] text-foreground/50 uppercase tracking-widest">Brasil Todo</p>
+                  <p className="text-[8px] sm:text-[9px] text-foreground/50 uppercase tracking-widest">Brasil Todo</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="relative flex-1 bg-background px-6 pt-2 pb-12 flex flex-col justify-center text-center">
+        <div className="relative flex-1 bg-background px-6 py-8 sm:py-12 flex flex-col justify-center text-center">
           <div className="relative z-10">
-            <h1 className="font-display leading-[1.0] text-[2.8rem] mb-10">
-              <span className="block text-foreground/90 font-light italic text-[2.4rem] mb-1">Resolva seu</span>
+            <h1 className="font-display leading-[1.0] text-[2.2rem] sm:text-[2.8rem] mb-8 sm:mb-10">
+              <span className="block text-foreground/90 font-light italic text-[1.8rem] sm:text-[2.4rem] mb-1">Resolva seu</span>
               <span className="block text-foreground uppercase tracking-tight font-bold mt-1 text-[#c2a36b]"> problema</span>
-              <span className="block text-cream italic font-light text-[2.4rem]">Jurídico antes que ele piore.</span>
+              <span className="block text-cream italic font-light text-[1.8rem] sm:text-[2.4rem]">Jurídico antes que ele piore.</span>
             </h1>
 
-            <p className="text-[16px] tracking-wide text-foreground/80 leading-[1.7] mb-16 max-w-[320px] mx-auto animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "2s" }}>
+            <p className="text-[14px] sm:text-[16px] tracking-wide text-foreground/80 leading-[1.6] sm:leading-[1.7] mb-10 sm:mb-14 max-w-[280px] sm:max-w-[320px] mx-auto animate-fade-up opacity-0 [animation-fill-mode:both]" style={{ animationDelay: "2s" }}>
               Atendimento direto, rápido e sem burocracia para resolver sua situação.
             </p>
 
@@ -84,11 +84,11 @@ export const Hero = () => {
                 href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Preciso de ajuda para resolver um problema jurídico.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-3 px-8 py-6 rounded-full bg-[#25D366] text-white font-bold text-[14px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.6)] transition-all duration-300"
+                className="w-full inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-5 sm:py-6 rounded-full bg-[#25D366] text-white font-bold text-[13px] sm:text-[14px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.6)] transition-all duration-300"
               >
                 Falar com advogado agora
               </a>
-              <div className="mt-14 flex items-center justify-center gap-3 text-[10px] uppercase tracking-[0.2em] text-cream/40 px-4 py-2 bg-white/[0.03] border border-cream/10 rounded-full w-fit mx-auto">
+              <div className="mt-8 sm:mt-12 flex items-center justify-center gap-3 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-cream/40 px-4 py-2 bg-white/[0.03] border border-cream/10 rounded-full w-fit mx-auto">
                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                  <span>Online agora — atendimento imediato</span>
               </div>
