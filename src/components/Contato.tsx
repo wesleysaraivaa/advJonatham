@@ -9,7 +9,7 @@ export const Contato = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent pointer-events-none" />
 
       <div className="relative">
-        <div className="relative grid grid-cols-1 lg:grid-cols-12 py-24 lg:py-40">
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 py-32 lg:py-48">
           <div className="lg:col-span-7 px-8 lg:pl-16 lg:pr-16">
             <ScrollReveal>
               <div className="mb-12 lg:mb-16">
@@ -23,7 +23,7 @@ export const Contato = () => {
               <div className="mb-8 lg:mb-10">
                 <div className="relative inline-block">
                   <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full bg-cream/50" />
-                  <h2 className="font-display text-4xl sm:text-5xl lg:text-[4rem] xl:text-[5rem] 2xl:text-[6rem] text-foreground leading-[1.0] lg:leading-[0.9] tracking-tighter pl-6 lg:pl-12">
+                  <h2 className="font-display leading-[1.0] lg:leading-[0.95] text-[3rem] sm:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] text-foreground tracking-tight pl-6 lg:pl-12">
                     Vamos conversar sobre<br className="hidden md:block" />
                     <span className="text-cream font-light italic font-serif">o seu caso?</span>
                   </h2>
@@ -40,7 +40,7 @@ export const Contato = () => {
                   href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de uma orientação imediata sobre o meu caso.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-10 py-6 rounded-full bg-[#25D366] text-white font-bold text-[13px] lg:text-[14px] tracking-[0.2em] uppercase hover:bg-[#20ba59] shadow-[0_20px_60px_-10px_rgba(37,211,102,0.6)] hover:shadow-[0_20px_80px_-10px_rgba(37,211,102,0.8)] transition-all duration-300 w-fit"
+                  className="inline-flex items-center justify-center gap-3 px-10 py-6 rounded-full bg-[#25D366] text-white font-bold text-[13px] lg:text-[14px] tracking-[0.2em] uppercase hover:bg-[#20ba59] shadow-[0_20px_60px_-10px_rgba(37,211,102,0.6)] hover:shadow-[0_20px_80px_-10px_rgba(37,211,102,0.8)] hover:scale-105 transition-all duration-300 w-fit"
                 >
                   Falar com advogado agora
                 </a>

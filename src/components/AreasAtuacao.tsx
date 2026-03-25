@@ -30,7 +30,7 @@ export const AreasAtuacao = () => {
 
 
   return (
-    <section id="atuacao" className="relative py-24 lg:py-40 overflow-hidden">
+    <section id="atuacao" className="relative py-40 lg:py-64 overflow-hidden">
       <div className="absolute inset-0 bg-navy-light bg-section-diagonal" />
       <div className="absolute -right-20 lg:-right-10 top-1/2 -translate-y-1/2 pointer-events-none">
         <Scale className="w-[20rem] h-[20rem] lg:w-[28rem] lg:h-[28rem] text-cream/[0.03] stroke-[0.3]" />
@@ -48,9 +48,9 @@ export const AreasAtuacao = () => {
           <div className="mb-16 lg:mb-32">
             <div className="relative inline-block">
               <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full max-h-32 bg-cream/50" />
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-[4rem] xl:text-[5rem] 2xl:text-[6rem] text-foreground leading-[1.0] lg:leading-[0.9] tracking-tighter pl-6 lg:pl-12">
-                Resolva sua situação com<br className="hidden md:block" />
-                <span className="text-cream font-light italic font-serif">apoio jurídico.</span>
+              <h2 className="font-display leading-[1.05] lg:leading-[1.0] text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] text-foreground tracking-tight pl-6 lg:pl-12">
+                Em quais situações <br className="hidden md:block" />
+                <span className="text-cream font-light italic font-serif">posso te ajudar.</span>
               </h2>
             </div>
           </div>
@@ -73,7 +73,7 @@ export const AreasAtuacao = () => {
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl lg:text-3xl xl:text-4xl text-foreground mb-4 lg:mb-6 leading-[1.1] lg:leading-[1.05] tracking-tight pr-4 group-hover:text-cream transition-colors duration-300 lg:min-h-[100px] xl:min-h-[120px]">
+                <h3 className="font-display font-semibold text-2xl lg:text-3xl xl:text-[2.2rem] text-foreground mb-4 lg:mb-6 leading-[1.15] lg:leading-[1.1] tracking-tight pr-4 group-hover:text-cream transition-colors duration-300 lg:min-h-[100px] xl:min-h-[120px]">
                   {area.title}
                 </h3>
 
@@ -101,12 +101,12 @@ export const AreasAtuacao = () => {
 
         <ScrollReveal delay={0.5}>
           <div className="mt-20 lg:mt-32 flex flex-col items-center justify-center gap-8">
-            <h3 className="font-display text-2xl lg:text-3xl text-foreground text-center">Não encontrou sua situação?</h3>
+            <h3 className="font-display text-xl lg:text-2xl xl:text-[2rem] text-foreground text-center">Não encontrou sua situação?</h3>
             <a
               href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de saber se o doutor atende o meu caso jurídico.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] transition-all duration-300 w-fit"
+              className="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] hover:shadow-[0_20px_60px_-10px_rgba(37,211,102,0.6)] hover:scale-105 transition-all duration-300 w-fit"
             >
               Falar com advogado agora
             </a>

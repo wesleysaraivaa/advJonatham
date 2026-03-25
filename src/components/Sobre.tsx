@@ -2,7 +2,7 @@ import { ScrollReveal } from "./ScrollReveal";
 
 export const Sobre = () => {
   return (
-    <section id="sobre" className="relative py-24 lg:py-40 overflow-hidden">
+    <section id="sobre" className="relative py-32 lg:py-48 overflow-hidden">
       <div
         className="absolute right-0 top-0 w-1/3 h-full bg-navy-light/50"
         style={{ clipPath: "polygon(30% 0, 100% 0, 100% 100%, 0 100%)" }} />
@@ -21,7 +21,7 @@ export const Sobre = () => {
             <ScrollReveal variant="left" delay={0.1}>
               <div className="relative inline-block mb-4 lg:mb-8">
                 <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full bg-cream/50" />
-                <p className="font-display leading-[1.1] lg:leading-[1.05] text-[2rem] sm:text-[2.2rem] lg:text-[2.8rem] xl:text-[3.2rem] text-foreground tracking-tight pl-6 lg:pl-12">
+                <p className="font-display leading-[1.2] lg:leading-[1.1] text-[1.5rem] sm:text-[1.8rem] lg:text-[2rem] xl:text-[2.4rem] text-foreground tracking-tight pl-6 lg:pl-12">
                   <span className="uppercase tracking-tighter font-bold text-[#c2a36b] pr-2 block mb-1">Atendimento direto,</span>
                   <span className="font-normal text-foreground block mb-1">com foco em resolver seu problema </span>
                   <span className="font-light italic font-serif text-cream block">com rapidez e segurança.</span>
@@ -30,11 +30,11 @@ export const Sobre = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="mt-10 lg:mt-12 pl-6 lg:pl-8 space-y-5 lg:space-y-6 text-muted-foreground leading-relaxed max-w-xl">
-                <p className="text-base lg:text-lg">
+              <div className="mt-8 lg:mt-10 pl-6 lg:pl-12 space-y-5 lg:space-y-6 text-muted-foreground leading-relaxed max-w-2xl">
+                <p className="text-lg lg:text-xl">
                   Cada caso é analisado com atenção e estratégia, buscando sempre a melhor solução jurídica para a sua situação.
                 </p>
-                <p className="text-base lg:text-lg">  
+                <p className="text-lg lg:text-xl">  
                   Atuamos com total clareza e proximidade, garantindo que você entenda exatamente o que está acontecendo em cada etapa do processo.
                 </p>
               </div>
@@ -50,7 +50,7 @@ export const Sobre = () => {
                   href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de falar diretamente com o doutor para resolver meu problema jurídico.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] transition-all duration-300 w-fit"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-5 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] hover:shadow-[0_20px_60px_-10px_rgba(37,211,102,0.6)] hover:scale-105 transition-all duration-300 w-fit"
                 >
                   Falar com advogado agora
                 </a>

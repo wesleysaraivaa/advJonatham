@@ -24,7 +24,7 @@ export const Diferenciais = () => {
   ];
 
   return (
-    <section className="relative py-16 lg:py-40 overflow-hidden">
+    <section className="relative py-24 lg:py-48 overflow-hidden">
       <div className="absolute inset-0 bg-navy-light bg-section-diagonal" />
 
       <div className="absolute -left-10 top-1/4 pointer-events-none hidden xl:block">
@@ -47,7 +47,7 @@ export const Diferenciais = () => {
           <div className="mb-12 lg:mb-20">
             <div className="relative inline-block">
               <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full max-h-32 bg-cream/50" />
-              <h2 className="font-display text-4xl sm:text-5xl lg:text-[4rem] xl:text-[5rem] 2xl:text-[6rem] text-foreground leading-[1.0] lg:leading-[0.9] tracking-tighter pl-6 lg:pl-12">
+              <h2 className="font-display leading-[1.05] lg:leading-[1.0] text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] text-foreground tracking-tight pl-6 lg:pl-12">
                 Veja como já ajudamos <br className="hidden md:block" />
                 <span className="text-cream font-light italic font-serif">outros clientes.</span>
               </h2>
@@ -69,7 +69,7 @@ export const Diferenciais = () => {
               <div
                 className={`group relative flex flex-col h-full ${
                   index !== depoimentos.length - 1 ? "border-b lg:border-b-0 lg:border-r" : ""
-                } border-foreground/10 py-12 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0`}
+                } border-foreground/10 py-12 lg:py-0 lg:px-12 first:lg:pl-0 last:lg:pr-0`}
               >
                 <div className="relative mb-8 lg:mb-12">
                   <Quote 
@@ -101,7 +101,7 @@ export const Diferenciais = () => {
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
-                        className="w-4 h-4 text-yellow-400 fill-yellow-400 opacity-90 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]" 
+                        className="w-5 h-5 text-yellow-400 fill-yellow-400 opacity-100 drop-shadow-[0_0_12px_rgba(250,204,21,0.8)]" 
                       />
                     ))}
                   </div>
@@ -117,12 +117,12 @@ export const Diferenciais = () => {
 
         <ScrollReveal delay={0.5}>
           <div className="mt-20 lg:mt-32 flex flex-col items-center justify-center gap-8">
-            <h3 className="font-display text-2xl lg:text-3xl text-foreground text-center">Pronto para resolver sua situação também?</h3>
+            <h3 className="font-display text-xl lg:text-2xl xl:text-[2rem] text-foreground text-center">Pronto para resolver sua situação também?</h3>
             <a
               href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Vi os resultados que o doutor conseguiu e gostaria de falar sobre o meu problema jurídico.")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center mt-2 gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] transition-all duration-300 w-fit"
+              className="inline-flex items-center justify-center mt-2 gap-3 px-8 py-5 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] hover:shadow-[0_20px_60px_-10px_rgba(37,211,102,0.6)] hover:scale-105 transition-all duration-300 w-fit"
             >
               Falar com advogado agora
             </a>
