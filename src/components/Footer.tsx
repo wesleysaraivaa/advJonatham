@@ -17,8 +17,8 @@ export const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="text-right flex flex-col items-end">
-            <p className="text-sm text-foreground/70 font-medium mb-3 max-w-sm">
+          <div className="text-left lg:text-right flex flex-col items-start lg:items-end">
+            <p className="text-sm text-foreground/70 font-medium mb-4 lg:mb-3 max-w-sm">
               Atendimento jurídico com ética, sigilo e responsabilidade profissional.
             </p>
             <span className="text-sm text-muted-foreground block">
