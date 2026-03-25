@@ -19,13 +19,12 @@ export const Sobre = () => {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
           <div className="lg:col-span-7">
             <ScrollReveal variant="left" delay={0.1}>
-              <div className="relative">
-                <div className="hidden lg:block absolute -left-6 lg:-left-10 top-2 w-1 h-32 bg-cream/40" />
-                <p className="font-display leading-[1.05] lg:leading-[1.0] text-[2rem] sm:text-[2.5rem] lg:text-[3.5rem] xl:text-[4.2rem] text-foreground tracking-tight">
-                  <span className="font-normal text-foreground block lg:inline mb-1 lg:mb-0">O Dr. Jonatham Moraes oferece </span>
-                  <span className="uppercase tracking-tighter font-bold text-[#c2a36b] pr-2">atendimento direto</span>
-                  <span className="font-normal text-foreground">, com foco em resolver seu problema com </span>
-                  <span className="font-light italic font-serif text-cream">rapidez e segurança.</span>
+              <div className="relative inline-block mb-4 lg:mb-8">
+                <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full bg-cream/50" />
+                <p className="font-display leading-[1.1] lg:leading-[1.05] text-[2rem] sm:text-[2.2rem] lg:text-[2.8rem] xl:text-[3.2rem] text-foreground tracking-tight pl-6 lg:pl-12">
+                  <span className="uppercase tracking-tighter font-bold text-[#c2a36b] pr-2 block mb-1">Atendimento direto,</span>
+                  <span className="font-normal text-foreground block mb-1">com foco em resolver seu problema </span>
+                  <span className="font-light italic font-serif text-cream block">com rapidez e segurança.</span>
                 </p>
               </div>
             </ScrollReveal>
@@ -33,13 +32,10 @@ export const Sobre = () => {
             <ScrollReveal delay={0.2}>
               <div className="mt-10 lg:mt-12 pl-6 lg:pl-8 space-y-5 lg:space-y-6 text-muted-foreground leading-relaxed max-w-xl">
                 <p className="text-base lg:text-lg">
-                  Cada caso é analisado com atenção e estratégia, buscando sempre a melhor solução de acordo com a sua situação.
+                  Cada caso é analisado com atenção e estratégia, buscando sempre a melhor solução jurídica para a sua situação.
                 </p>
                 <p className="text-base lg:text-lg">  
-                  O atendimento é feito com clareza, proximidade e responsabilidade.
-                </p>
-                <p className="text-base lg:text-lg">
-                  Você entenda exatamente o que está acontecendo em cada etapa.
+                  Atuamos com total clareza e proximidade, garantindo que você entenda exatamente o que está acontecendo em cada etapa do processo.
                 </p>
               </div>
             </ScrollReveal>
@@ -47,7 +43,7 @@ export const Sobre = () => {
             <ScrollReveal delay={0.3}>
               <div className="mt-10 lg:mt-14 pl-6 lg:pl-8 flex flex-col gap-6">
                 <div>
-                  <p className="font-display text-xl lg:text-xl text-foreground">Pronto para resolver seu problema?</p>
+                  <p className="font-display text-xl lg:text-xl text-foreground">Precisa de ajuda jurídica agora?</p>
                 </div>
                 
                 <a
@@ -62,19 +58,53 @@ export const Sobre = () => {
             </ScrollReveal>
           </div>
 
-          <div className="lg:col-span-4 lg:col-start-9 flex flex-col justify-between">
-            <ScrollReveal variant="stagger" delay={0.3} className="mt-12 lg:mt-0 space-y-6">
-              <div className="border-l-2 border-cream/30 pl-6">
-                <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground/60">OAB</p>
-                <p className="text-base lg:text-lg font-display text-foreground mt-2">54.863 - CE</p>
-              </div>
-              <div className="border-l-2 border-cream/20 pl-6">
-                <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground/60">Atuação</p>
-                <p className="text-base lg:text-lg font-display text-foreground mt-2 leading-relaxed lg:leading-relaxed">Ubajara – CE e todo o Brasil</p>
-              </div>
-              <div className="border-l-2 border-cream/10 pl-6">
-                <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground/60">Atendimento</p>
-                <p className="text-base lg:text-lg font-display text-foreground mt-2">Online e presencial</p>
+          <div className="lg:col-span-4 lg:col-start-9 flex flex-col justify-center mt-16 lg:mt-12 w-full">
+            <ScrollReveal delay={0.3}>
+              <div className="bg-navy-light/10 backdrop-blur-md border border-foreground/5 rounded-2xl p-8 lg:p-12 space-y-10 relative overflow-hidden w-full max-w-sm mx-auto lg:mx-0">
+                
+                <div className="absolute top-0 right-0 w-32 h-32 bg-cream/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+                <div>
+                  <span className="text-xs lg:text-sm tracking-[0.4em] uppercase text-foreground/90 block font-bold mb-3">
+                    CREDENCIAMENTO
+                  </span>
+                  <div className="h-px w-24 bg-[#c2a36b]/80 mt-4 mb-2" />
+                </div>
+
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 block mb-2 font-medium">
+                    Inscrição OAB
+                  </span>
+                  <span className="text-base lg:text-lg font-display text-foreground">
+                    54.863 - CE
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 block mb-2 font-medium">
+                    Atuação
+                  </span>
+                  <span className="text-base lg:text-lg font-display text-foreground block leading-snug">
+                    Ubajara - CE <br /> e todo o Brasil
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#c2a36b]/70 block mb-5 font-medium">
+                    Formato de Atendimento
+                  </span>
+                  <ul className="space-y-4">
+                    <li className="flex items-center gap-4 text-foreground/90">
+                      <div className="w-2 h-2 rounded-full bg-[#c2a36b]" />
+                      <span className="text-sm">Consultoria Online</span>
+                    </li>
+                    <li className="flex items-center gap-4 text-foreground/90">
+                      <div className="w-2 h-2 rounded-full bg-[#c2a36b]" />
+                      <span className="text-sm">Agendamento Presencial</span>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
             </ScrollReveal>
           </div>
