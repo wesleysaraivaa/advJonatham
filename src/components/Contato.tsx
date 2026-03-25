@@ -1,20 +1,20 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { MessageCircle, Mail, Instagram } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 export const Contato = () => {
   return (
-    <section id="contato" className="relative overflow-visible">
-      <div className="relative">
-        <div
-          className="absolute right-0 -top-32 w-1/3 h-[calc(100%+8rem)] bg-navy-light/50 bg-diagonal-lg" />
+    <section id="contato" className="relative overflow-hidden bg-background">
+      <div className="absolute inset-0 bg-navy-light/40" />
+      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-diagonal-lg opacity-[0.03] pointer-events-none mix-blend-overlay" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent pointer-events-none" />
 
+      <div className="relative">
         <div className="relative grid grid-cols-1 lg:grid-cols-12 py-24 lg:py-40">
           <div className="lg:col-span-7 px-8 lg:pl-16 lg:pr-16">
             <ScrollReveal>
               <div className="mb-12 lg:mb-16">
-                <span className="text-sm tracking-[0.3em] lg:tracking-[0.4em] uppercase text-cream">
-                  04 — CONTATO
+                <span className="text-sm tracking-[0.3em] lg:tracking-[0.4em] uppercase text-muted-foreground">
+                  Atendimento Direto com o Advogado
                 </span>
               </div>
             </ScrollReveal>
@@ -23,33 +23,41 @@ export const Contato = () => {
               <div className="mb-8 lg:mb-10">
                 <div className="relative inline-block">
                   <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full bg-cream/50" />
-                  <h2 className="font-display text-4xl lg:text-editorial-lg text-foreground leading-[0.95] pl-6 lg:pl-12">
-                    Vamos conversar sobre<br />
-                    seu caso?
+                  <h2 className="font-display text-4xl sm:text-5xl lg:text-[4rem] xl:text-[5rem] 2xl:text-[6rem] text-foreground leading-[1.0] lg:leading-[0.9] tracking-tighter pl-6 lg:pl-12">
+                    Vamos conversar sobre<br className="hidden md:block" />
+                    <span className="text-cream font-light italic font-serif">o seu caso?</span>
                   </h2>
                 </div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-lg mb-12 lg:mb-16">
-                Entre em contato para agendar uma consulta. Estou à
-                disposição para esclarecer suas dúvidas e encontrar a melhor
-                solução para suas necessidades jurídicas.
+              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-lg mb-10 lg:mb-12">
+                Fale diretamente com o advogado e receba orientação imediata para o seu caso.
               </p>
+              <div className="mb-20 lg:mb-28">
+                <a
+                  href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de uma orientação imediata sobre o meu caso.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-3 px-10 py-6 rounded-full bg-[#25D366] text-white font-bold text-[13px] lg:text-[14px] tracking-[0.2em] uppercase hover:bg-[#20ba59] shadow-[0_20px_60px_-10px_rgba(37,211,102,0.6)] hover:shadow-[0_20px_80px_-10px_rgba(37,211,102,0.8)] transition-all duration-300 w-fit"
+                >
+                  Falar com advogado agora
+                </a>
+              </div>
             </ScrollReveal>
 
             <ScrollReveal variant="stagger" delay={0.3}>
               <div className="space-y-8">
                 <a href="https://wa.me/5585999999999" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato via WhatsApp" className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
-                    <MessageCircle className="w-4 h-4 text-muted-foreground group-hover:text-cream transition-colors" />
+                  <div className="w-10 h-10 rounded-full border border-[rgba(37,211,102,0.4)] flex items-center justify-center mt-0.5 group-hover:border-[#25D366] transition-colors">
+                    <MessageCircle className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
                   </div>
                   <div>
-                    <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground block mb-1.5">
-                      WHATSAPP
+                    <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-1.5 flex items-center gap-2">
+                      WHATSAPP <span className="text-[#25D366] text-[9px] lowercase tracking-normal font-medium bg-[#25D366]/10 px-2 py-0.5 rounded-full">(Atendimento mais rápido)</span>
                     </span>
-                    <span className="text-base lg:text-lg font-display text-foreground group-hover:text-cream transition-colors">
+                    <span className="text-lg lg:text-xl font-display font-semibold text-foreground group-hover:text-cream transition-colors">
                       (88) 99999-9999
                     </span>
                   </div>
@@ -86,61 +94,65 @@ export const Contato = () => {
             </ScrollReveal>
           </div>
 
-          <div className="lg:col-span-4 lg:col-start-9 px-8 lg:px-0 lg:pr-16 flex flex-col justify-center space-y-0 mt-12 lg:mt-0">
+          <div className="lg:col-span-4 lg:col-start-9 px-8 lg:px-0 lg:pr-16 flex flex-col justify-center mt-16 lg:mt-0 w-full">
             <ScrollReveal delay={0.2}>
-              <div className="border-r-2 border-foreground/10 pr-8 py-8">
-                <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground block mb-3">
-                  LOCALIZAÇÃO
-                </span>
-                <span className="text-base lg:text-lg font-display text-foreground">
-                  Ubajara, Ceará
-                </span>
+              <div className="bg-navy-light/10 backdrop-blur-md border border-foreground/5 rounded-2xl p-8 lg:p-12 space-y-8 relative overflow-hidden w-full max-w-sm mx-auto lg:mx-0">
+                
+                <div className="absolute top-0 right-0 w-32 h-32 bg-cream/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+
+                <div>
+                  <span className="text-xs lg:text-sm tracking-[0.4em] uppercase text-foreground/90 block font-bold mb-3">
+                    INFORMAÇÕES
+                  </span>
+                  <div className="h-px w-16 bg-[#c2a36b]/60 mt-4 mb-2" />
+                </div>
+
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 block mb-2 font-medium">
+                    Localização
+                  </span>
+                  <span className="text-base lg:text-lg font-display text-foreground">
+                    Ubajara, Ceará
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 block mb-2 font-medium">
+                    Atendimento
+                  </span>
+                  <span className="text-base lg:text-lg font-display text-foreground block">
+                    Segunda a Sexta
+                  </span>
+                  <span className="text-base lg:text-lg font-display text-foreground">
+                    09h às 18h
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#c2a36b]/70 block mb-5 font-medium">
+                    Compromissos
+                  </span>
+                  <ul className="space-y-4">
+                    <li className="flex items-center gap-4 text-foreground/90">
+                      <div className="w-2 h-2 rounded-full bg-[#c2a36b]" />
+                      <span className="text-sm">Atendimento imediato</span>
+                    </li>
+                    <li className="flex items-center gap-4 text-foreground/90">
+                      <div className="w-2 h-2 rounded-full bg-[#c2a36b]" />
+                      <span className="text-sm">Sigilo absoluto</span>
+                    </li>
+                    <li className="flex items-center gap-4 text-foreground/90">
+                      <div className="w-2 h-2 rounded-full bg-[#c2a36b]" />
+                      <span className="text-sm">Resposta rápida</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="border-r-2 border-foreground/10 pr-8 py-8">
-                <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground block mb-3">
-                  ATENDIMENTO
-                </span>
-                <span className="text-base lg:text-lg font-display text-foreground block">
-                  Segunda a Sexta
-                </span>
-                <span className="text-base lg:text-lg font-display text-foreground">
-                  09h às 18h
-                </span>
-              </div>
-            </ScrollReveal>
-
           </div>
         </div>
       </div>
 
-      <div className="bg-background">
-        <ScrollReveal delay={0.5}>
-          <div className="mx-8 lg:mx-16 pt-8 pb-8 border-t border-foreground/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <div className="flex items-center gap-4">
-              <img src={logo} alt="Jonatham Moraes" className="h-10 w-auto opacity-60" />
-              <div>
-                <span className="text-sm font-display text-foreground block">
-                  Jonatham Moraes
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  OAB/CE 54.863
-                </span>
-              </div>
-            </div>
-            <div className="text-right">
-              <span className="text-sm text-muted-foreground block">
-                © 2026 Jonatham Moraes — Advocacia e Consultoria Jurídica
-              </span>
-              <span className="text-xs text-muted-foreground">
-                Todos os direitos reservados
-              </span>
-            </div>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>);
-
+    </section>
+  );
 };

@@ -8,6 +8,7 @@ import { Navigation } from "@/components/Navigation";
 import { Marquee } from "@/components/Marquee";
 import { Preloader } from "@/components/Preloader";
 import { GrainOverlay } from "@/components/GrainOverlay";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ const Index = () => {
         <Marquee />
         <Diferenciais />
         <Contato />
+        <Footer />
       </main>
     </>
   );

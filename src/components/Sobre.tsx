@@ -21,11 +21,11 @@ export const Sobre = () => {
             <ScrollReveal variant="left" delay={0.1}>
               <div className="relative">
                 <div className="hidden lg:block absolute -left-6 lg:-left-10 top-2 w-1 h-32 bg-cream/40" />
-                <p className="font-display leading-[1.15] lg:leading-[1.1] text-[1.8rem] sm:text-[2.2rem] lg:text-[3rem] xl:text-[3.5rem] text-foreground/90">
-                  <span className="font-light italic text-foreground/80 block lg:inline mb-1 lg:mb-0">O Dr. Jonatham Moraes oferece </span>
-                  <span className="uppercase tracking-tighter font-bold text-[#c2a36b]">atendimento direto</span>
-                  <span className="font-light italic text-foreground/80">, com foco em resolver seu problema com </span>
-                  <span className="italic font-serif text-cream">rapidez e segurança.</span>
+                <p className="font-display leading-[1.05] lg:leading-[1.0] text-[2rem] sm:text-[2.5rem] lg:text-[3.5rem] xl:text-[4.2rem] text-foreground tracking-tight">
+                  <span className="font-normal text-foreground block lg:inline mb-1 lg:mb-0">O Dr. Jonatham Moraes oferece </span>
+                  <span className="uppercase tracking-tighter font-bold text-[#c2a36b] pr-2">atendimento direto</span>
+                  <span className="font-normal text-foreground">, com foco em resolver seu problema com </span>
+                  <span className="font-light italic font-serif text-cream">rapidez e segurança.</span>
                 </p>
               </div>
             </ScrollReveal>
