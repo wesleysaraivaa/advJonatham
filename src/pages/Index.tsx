@@ -5,7 +5,6 @@ import { AreasAtuacao } from "@/components/AreasAtuacao";
 import { Diferenciais } from "@/components/Diferenciais";
 import { Contato } from "@/components/Contato";
 import { Navigation } from "@/components/Navigation";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Marquee } from "@/components/Marquee";
 import { Preloader } from "@/components/Preloader";
 import { GrainOverlay } from "@/components/GrainOverlay";
@@ -29,7 +28,6 @@ const Index = () => {
         <Marquee />
         <Diferenciais />
         <Contato />
-        <WhatsAppButton />
       </main>
     </>
   );
