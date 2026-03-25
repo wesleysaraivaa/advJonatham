@@ -5,25 +5,25 @@ export const AreasAtuacao = () => {
   const areas = [
   {
     id: "01",
-    title: "Direito Civil",
+    title: "Problemas com contratos, família ou bens?",
     description:
-    "Contratos, responsabilidade civil, direito de família, sucessões e questões patrimoniais.",
-    keywords: ["Contratos", "Família", "Sucessões"],
+    "Questões envolvendo contratos, família, bens ou heranças precisam de orientação jurídica segura para evitar prejuízos.",
+    keywords: ["Contratos", "Família", "Bens"],
     Icon: Scale
   },
   {
     id: "02",
-    title: "Direito do Consumidor",
+    title: "Banco, empresa ou cobrança indevida?",
     description:
-    "Defesa dos direitos nas relações de consumo. Ações contra empresas, bancos e operadoras.",
-    keywords: ["Bancos", "Empresas", "Serviços"],
+    "Cobranças indevidas, negativação ou abusos de empresas podem ser resolvidos com apoio jurídico adequado.",
+    keywords: ["Bancos", "Empresas", "Cobranças"],
     Icon: ShieldCheck
   },
   {
     id: "03",
-    title: "Direito Previdenciário",
+    title: "Benefício negado pelo INSS?",
     description:
-    "Aposentadorias, pensões, benefícios por incapacidade e revisões junto ao INSS.",
+    "Aposentadorias, pensões e benefícios negados podem ser revisados para garantir seus direitos.",
     keywords: ["INSS", "Aposentadoria", "Benefícios"],
     Icon: Heart
   }];
@@ -39,7 +39,7 @@ export const AreasAtuacao = () => {
         <ScrollReveal>
           <div className="mb-12 lg:mb-20">
             <span className="text-sm lg:text-sm tracking-[0.3em] lg:tracking-[0.4em] uppercase text-muted-foreground">
-              02 — Áreas de Atuação
+              Como posso te ajudar?
             </span>
           </div>
         </ScrollReveal>
@@ -47,10 +47,10 @@ export const AreasAtuacao = () => {
         <ScrollReveal variant="left" delay={0.1}>
           <div className="mb-16 lg:mb-32">
             <div className="relative inline-block">
-              <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full bg-cream/50" />
-              <h2 className="font-display text-4xl lg:text-editorial-lg text-foreground leading-[0.9] pl-6 lg:pl-12">
-                Três pilares.<br />
-                <span className="text-cream">Uma missão.</span>
+              <div className="absolute -left-4 lg:-left-8 top-0 w-1 h-full max-h-32 bg-cream/50" />
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-[4rem] xl:text-[5rem] 2xl:text-[6rem] text-foreground leading-[1.0] lg:leading-[0.9] tracking-tighter pl-6 lg:pl-12">
+                Resolva sua situação com<br className="hidden md:block" />
+                <span className="text-cream font-light italic font-serif">apoio jurídico.</span>
               </h2>
             </div>
           </div>
@@ -58,9 +58,9 @@ export const AreasAtuacao = () => {
 
         <div className="grid lg:grid-cols-3 gap-0 lg:gap-0">
           {areas.map((area, index) =>
-          <ScrollReveal key={area.id} delay={0.2 + index * 0.1}>
+          <ScrollReveal key={area.id} delay={0.2 + index * 0.1} className="h-full">
               <div
-              className={`group relative ${
+              className={`group relative flex flex-col h-full ${
               index !== areas.length - 1 ? "border-b lg:border-b-0 lg:border-r" : ""} border-foreground/10 py-12 lg:py-0 lg:px-8 first:lg:pl-0 last:lg:pr-0`
               }>
                 <div className="relative mb-8 lg:mb-12">
@@ -73,7 +73,7 @@ export const AreasAtuacao = () => {
                   </span>
                 </div>
 
-                <h3 className="font-display text-2xl lg:text-editorial-md text-foreground mb-3 lg:mb-4 group-hover:text-cream transition-colors duration-300">
+                <h3 className="font-display text-2xl lg:text-3xl xl:text-4xl text-foreground mb-4 lg:mb-6 leading-[1.1] lg:leading-[1.05] tracking-tight pr-4 group-hover:text-cream transition-colors duration-300 lg:min-h-[100px] xl:min-h-[120px]">
                   {area.title}
                 </h3>
 
@@ -81,7 +81,7 @@ export const AreasAtuacao = () => {
                   {area.description}
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mt-auto">
                   {area.keywords.map((keyword) =>
                 <span
                   key={keyword}
@@ -100,12 +100,23 @@ export const AreasAtuacao = () => {
         </div>
 
         <ScrollReveal delay={0.5}>
-          <div className="mt-20 lg:mt-32 flex items-center justify-center gap-6">
-            <div className="h-px w-20 bg-foreground/10" />
-            <span className="text-[10px] tracking-[0.5em] uppercase text-muted-foreground/40">
-              Atuação Integral
-            </span>
-            <div className="h-px w-20 bg-foreground/10" />
+          <div className="mt-20 lg:mt-32 flex flex-col items-center justify-center gap-8">
+            <h3 className="font-display text-2xl lg:text-3xl text-foreground text-center">Não encontrou sua situação?</h3>
+            <a
+              href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de saber se o doutor atende o meu caso jurídico.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold text-[12px] lg:text-[13px] tracking-widest uppercase hover:bg-[#20ba59] shadow-[0_15px_45px_-10px_rgba(37,211,102,0.4)] transition-all duration-300 w-fit"
+            >
+              Falar com advogado agora
+            </a>
+            <div className="flex items-center justify-center gap-6 mt-6 w-full opacity-80">
+              <div className="h-px w-12 lg:w-20 bg-foreground/20" />
+              <span className="text-[9px] lg:text-[10px] tracking-[0.3em] lg:tracking-[0.5em] uppercase text-muted-foreground/60">
+                Atendimento rápido • Sigilo absoluto
+              </span>
+              <div className="h-px w-12 lg:w-20 bg-foreground/20" />
+            </div>
           </div>
         </ScrollReveal>
       </div>
