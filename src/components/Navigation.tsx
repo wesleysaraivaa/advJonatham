@@ -15,9 +15,9 @@ export const Navigation = () => {
   }, []);
 
   const links = [
-    { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
     { label: "Atuação", href: "#atuacao" },
+    { label: "Resultados", href: "#resultados" },
     { label: "Contato", href: "#contato" },
   ];
 
@@ -41,12 +41,26 @@ export const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="nav-link line-reveal animate-fade-in [animation-fill-mode:both]"
+                className="nav-link line-reveal animate-fade-in [animation-fill-mode:both] text-[11px] tracking-widest uppercase hover:text-cream transition-colors"
                 style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
               >
                 {link.label}
               </a>
             ))}
+            
+            <a
+              href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de falar com o advogado.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`ml-2 inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-300 animate-fade-in [animation-fill-mode:both] hover:scale-105 hover:shadow-[0_0_20px_-5px_rgba(194,163,107,0.4)] ${
+                isScrolled 
+                  ? "border-[#c2a36b]/50 text-[#c2a36b] hover:bg-[#c2a36b] hover:text-background"
+                  : "bg-background/90 backdrop-blur-md border-[#c2a36b]/30 text-[#c2a36b] shadow-2xl hover:bg-[#c2a36b] hover:text-background"
+              }`}
+              style={{ animationDelay: `${links.length * 0.1 + 0.3}s` }}
+            >
+              Falar com advogado
+            </a>
           </div>
         </div>
       </nav>
@@ -88,6 +102,21 @@ export const Navigation = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href={`https://wa.me/5585999999999?text=${encodeURIComponent("Olá! Gostaria de falar com o advogado.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMobileOpen(false)}
+            className="mt-4 px-8 py-3 rounded-full border border-[#c2a36b] text-[#c2a36b] hover:bg-[#c2a36b] hover:text-background text-xs font-bold tracking-widest uppercase transition-colors"
+            style={{ 
+              animationDelay: `${links.length * 0.1}s`,
+              opacity: isMobileOpen ? 1 : 0,
+              transform: isMobileOpen ? "translateY(0)" : "translateY(20px)",
+              transition: `opacity 0.3s ease ${links.length * 0.1}s, transform 0.3s ease ${links.length * 0.1}s`
+            }}
+          >
+            Falar com advogado
+          </a>
         </div>
       </div>
     </>

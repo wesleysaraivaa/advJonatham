@@ -48,44 +48,44 @@ export const Contato = () => {
             </ScrollReveal>
 
             <ScrollReveal variant="stagger" delay={0.3}>
-              <div className="space-y-8">
-                <a href="https://wa.me/5585999999999" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato via WhatsApp" className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-full border border-[rgba(37,211,102,0.4)] flex items-center justify-center mt-0.5 group-hover:border-[#25D366] transition-colors">
-                    <MessageCircle className="w-4 h-4 text-[#25D366] group-hover:scale-110 transition-transform" />
+              <div className="space-y-12">
+                <a href="https://wa.me/5585999999999" target="_blank" rel="noopener noreferrer" aria-label="Entrar em contato via WhatsApp" className="flex items-start gap-5 lg:gap-6 group">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-[rgba(37,211,102,0.4)] flex items-center justify-center mt-0.5 group-hover:border-[#25D366] transition-colors">
+                    <MessageCircle className="w-6 h-6 lg:w-7 lg:h-7 text-[#25D366] group-hover:scale-110 transition-transform" />
                   </div>
-                  <div>
+                  <div className="flex flex-col justify-center py-1">
                     <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-1.5 flex items-center gap-2">
                       WHATSAPP <span className="text-[#25D366] text-[9px] lowercase tracking-normal font-medium bg-[#25D366]/10 px-2 py-0.5 rounded-full">(Atendimento mais rápido)</span>
                     </span>
-                    <span className="text-lg lg:text-xl font-display font-semibold text-foreground group-hover:text-cream transition-colors">
+                    <span className="text-xl lg:text-2xl font-display font-semibold text-foreground group-hover:text-cream transition-colors">
                       (88) 99999-9999
                     </span>
                   </div>
                 </a>
 
-                <a href="https://www.instagram.com/advjonathammoraes/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram @advjonathammoraes" className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
-                    <Instagram className="w-4 h-4 text-muted-foreground group-hover:text-cream transition-colors" />
+                <a href="https://www.instagram.com/advjonathammoraes/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram @advjonathammoraes" className="flex items-start gap-5 lg:gap-6 group">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
+                    <Instagram className="w-6 h-6 lg:w-7 lg:h-7 text-muted-foreground group-hover:text-cream transition-colors" />
                   </div>
-                  <div>
+                  <div className="flex flex-col justify-center py-1">
                     <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground block mb-1.5">
                       INSTAGRAM
                     </span>
-                    <span className="text-base lg:text-lg font-display text-foreground group-hover:text-cream transition-colors">
+                    <span className="text-lg lg:text-xl font-display text-foreground group-hover:text-cream transition-colors">
                       @advjonathammoraes
                     </span>
                   </div>
                 </a>
 
-                <a href="mailto:contato@jonathammoraes.adv.br" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para contato@jonathammoraes.adv.br" className="flex items-start gap-4 group">
-                  <div className="w-10 h-10 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
-                    <Mail className="w-4 h-4 text-muted-foreground group-hover:text-cream transition-colors" />
+                <a href="mailto:contato@jonathammoraes.adv.br" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para contato@jonathammoraes.adv.br" className="flex items-start gap-5 lg:gap-6 group">
+                  <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
+                    <Mail className="w-6 h-6 lg:w-7 lg:h-7 text-muted-foreground group-hover:text-cream transition-colors" />
                   </div>
-                  <div>
+                  <div className="flex flex-col justify-center py-1">
                     <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground block mb-1.5">
                       E-MAIL
                     </span>
-                    <span className="text-base lg:text-lg font-display text-foreground group-hover:text-cream transition-colors">
+                    <span className="text-lg lg:text-xl font-display text-foreground group-hover:text-cream transition-colors">
                       contato@jonathammoraes.adv.br
                     </span>
                   </div>

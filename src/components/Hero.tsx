@@ -88,7 +88,7 @@ export const Hero = () => {
               >
                 Falar com advogado agora
               </a>
-              <div className="mt-8 sm:mt-12 flex items-center justify-center gap-3 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-cream/40 px-4 py-2 bg-white/[0.03] border border-cream/10 rounded-full w-fit mx-auto">
+              <div className="mt-4 sm:mt-6 flex items-center justify-center gap-3 text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-cream/40 px-4 py-2 bg-white/[0.03] border border-cream/10 rounded-full w-fit mx-auto">
                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                  <span>Online agora — atendimento imediato</span>
               </div>
@@ -155,7 +155,7 @@ export const Hero = () => {
               Fale agora com o Dr. Jonatham Moraes. Atendimento <span className="text-foreground font-normal">direto, rápido e sem burocracia</span> para resolver sua situação.
             </p>
             
-            <div className="flex items-center gap-4 mb-14 xl:mb-20">
+            <div className="flex items-center gap-4 mb-8 xl:mb-12">
                <div className="flex items-center gap-4 xl:gap-5 px-6 xl:px-8 py-3 xl:py-4 rounded-full bg-white/[0.1] border border-cream/40 backdrop-blur-md shadow-2xl">
                  <span className="w-2.5 h-2.5 xl:w-3 xl:h-3 rounded-full bg-green-500 animate-pulse shadow-[0_0_20px_rgba(34,197,94,0.9)]" />
                  <span className="text-[11px] xl:text-[13px] uppercase tracking-[0.3em] xl:tracking-[0.4em] text-cream font-black">Online agora — atendimento imediato</span>

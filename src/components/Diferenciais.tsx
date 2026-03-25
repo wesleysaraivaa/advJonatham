@@ -24,7 +24,7 @@ export const Diferenciais = () => {
   ];
 
   return (
-    <section className="relative py-24 lg:py-48 overflow-hidden">
+    <section id="resultados" className="relative py-24 lg:py-48 overflow-hidden">
       <div className="absolute inset-0 bg-navy-light bg-section-diagonal" />
 
       <div className="absolute -left-10 top-1/4 pointer-events-none hidden xl:block">

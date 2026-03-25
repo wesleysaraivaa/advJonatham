@@ -30,7 +30,7 @@ export const Sobre = () => {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="mt-8 lg:mt-10 pl-6 lg:pl-12 space-y-5 lg:space-y-6 text-muted-foreground leading-relaxed max-w-2xl">
+              <div className="mt-8 lg:mt-10 pl-6 lg:pl-12 space-y-6 lg:space-y-8 text-muted-foreground leading-loose max-w-2xl">
                 <p className="text-lg lg:text-xl">
                   Cada caso é analisado com atenção e estratégia, buscando sempre a melhor solução jurídica para a sua situação.
                 </p>
