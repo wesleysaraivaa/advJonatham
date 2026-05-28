@@ -38,7 +38,7 @@ export const Preloader = ({ onComplete }: PreloaderProps) => {
 
       <img
         src={logo}
-        alt="Jonatham Moraes Advocacia"
+        alt="Bruno Cesar Advocacia"
         className="relative z-10 w-28 lg:w-80 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
         style={{
           opacity: phase === "logo" ? 1 : 0,

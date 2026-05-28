@@ -5,7 +5,7 @@ export const Diferenciais = () => {
   const depoimentos = [
     {
       id: "01",
-      texto: "Tive um problema com minha aposentadoria e não sabia o que fazer. O Dr. Jonatham resolveu tudo com rapidez e clareza. Hoje estou tranquila.",
+      texto: "Tive um problema com minha aposentadoria e não sabia o que fazer. O Dr. Bruno resolveu tudo com rapidez e clareza. Hoje estou tranquila.",
       autor: "Maria Souza",
       cargo: "Cliente – Aposentada",
     },

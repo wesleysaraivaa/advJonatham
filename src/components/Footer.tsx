@@ -7,13 +7,13 @@ export const Footer = () => {
       <ScrollReveal delay={0.5}>
         <div className="mx-8 lg:mx-16 pt-8 pb-8 border-t border-foreground/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <div className="flex items-center gap-4">
-            <img src={logo} alt="Jonatham Moraes" className="h-10 w-auto opacity-60" />
+            <img src={logo} alt="Bruno Cesar" className="h-10 w-auto opacity-60" />
             <div>
               <span className="text-sm font-display text-foreground block">
-                Jonatham Moraes
+                Bruno Cesar
               </span>
               <span className="text-xs text-muted-foreground">
-                OAB/CE 54.863
+                OAB/CE 00.000
               </span>
             </div>
           </div>
@@ -22,7 +22,7 @@ export const Footer = () => {
               Atendimento jurídico com ética, sigilo e responsabilidade profissional.
             </p>
             <span className="text-sm text-muted-foreground block">
-              © 2026 Jonatham Moraes
+              © 2026 Bruno Cesar
             </span>
             <span className="text-xs text-muted-foreground mt-1">
               Todos os direitos reservados

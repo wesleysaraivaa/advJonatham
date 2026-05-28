@@ -63,7 +63,7 @@ export const Contato = () => {
                   </div>
                 </a>
 
-                <a href="https://www.instagram.com/advjonathammoraes/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram @advjonathammoraes" className="flex items-start gap-5 lg:gap-6 group">
+                <a href="https://www.instagram.com/advbrunocesar/" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram @advbrunocesar" className="flex items-start gap-5 lg:gap-6 group">
                   <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
                     <Instagram className="w-6 h-6 lg:w-7 lg:h-7 text-muted-foreground group-hover:text-cream transition-colors" />
                   </div>
@@ -72,12 +72,12 @@ export const Contato = () => {
                       INSTAGRAM
                     </span>
                     <span className="text-lg lg:text-xl font-display text-foreground group-hover:text-cream transition-colors">
-                      @advjonathammoraes
+                      @advbrunocesar
                     </span>
                   </div>
                 </a>
 
-                <a href="mailto:contato@jonathammoraes.adv.br" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para contato@jonathammoraes.adv.br" className="flex items-start gap-5 lg:gap-6 group">
+                <a href="mailto:contato@brunocesar.adv.br" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para contato@brunocesar.adv.br" className="flex items-start gap-5 lg:gap-6 group">
                   <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border border-foreground/20 flex items-center justify-center mt-0.5 group-hover:border-cream/50 transition-colors">
                     <Mail className="w-6 h-6 lg:w-7 lg:h-7 text-muted-foreground group-hover:text-cream transition-colors" />
                   </div>
@@ -86,7 +86,7 @@ export const Contato = () => {
                       E-MAIL
                     </span>
                     <span className="text-lg lg:text-xl font-display text-foreground group-hover:text-cream transition-colors">
-                      contato@jonathammoraes.adv.br
+                      contato@brunocesar.adv.br
                     </span>
                   </div>
                 </a>

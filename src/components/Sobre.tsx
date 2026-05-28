@@ -76,7 +76,7 @@ export const Sobre = () => {
                     Inscrição OAB
                   </span>
                   <span className="text-base lg:text-lg font-display text-foreground">
-                    54.863 - CE
+                    00.000 - CE
                   </span>
                 </div>
 

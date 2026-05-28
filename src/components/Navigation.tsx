@@ -32,7 +32,7 @@ export const Navigation = () => {
           <div className="flex items-center">
             {isScrolled && (
               <a href="#inicio" className="flex items-center gap-3">
-                <img src={logo} alt="Jonatham Moraes" className="h-16 w-auto opacity-90" />
+                <img src={logo} alt="Bruno Cesar" className="h-16 w-auto opacity-90" />
               </a>
             )}
           </div>
